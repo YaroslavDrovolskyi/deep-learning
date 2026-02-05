@@ -18,12 +18,12 @@ PIP_PACKAGES=(
 NODES=(
     #"https://github.com/ltdrdata/ComfyUI-Manager"
     #"https://github.com/cubiq/ComfyUI_essentials"
-    "https://github.com/Layer-norm/comfyui-lama-remover"
-    "https://github.com/rgthree/rgthree-comfy"
+    #"https://github.com/Layer-norm/comfyui-lama-remover"
+    #"https://github.com/rgthree/rgthree-comfy"
 )
 
 WORKFLOWS=(
-    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/workflow/object-removal-inpainting.json"
+    #"https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/workflow/object-removal-inpainting.json"
 )
 
 CHECKPOINT_MODELS=(
