@@ -52,6 +52,7 @@ function provisioning_start() {
     provisioning_get_nodes
     provisioning_get_pip_packages
     provisioning_get_input
+    provisioning_get_workflows
     provisioning_get_files \
         "${COMFYUI_DIR}/models/checkpoints" \
         "${CHECKPOINT_MODELS[@]}"
@@ -88,7 +89,7 @@ function provisioning_get_pip_packages() {
 function provisioning_get_nodes() {
     for repo in "${NODES[@]}"; do
         dir="${repo##*/}"
-        path="${COMFYUI_DIR}custom_nodes/${dir}"
+        path="${COMFYUI_DIR}/custom_nodes/${dir}"
         requirements="${path}/requirements.txt"
         if [[ -d $path ]]; then
             if [[ ${AUTO_UPDATE,,} != "false" ]]; then
@@ -178,6 +179,20 @@ function provisioning_download() {
     fi
 }
 
+# Downloads all workflows files from WORKFLOWS array
+function provisioning_get_workflows() {
+    WORKFLOW_DIR=${COMFYUI_DIR}/user/default/workflows
+
+    mkdir -p "$WORKFLOW_DIR"
+
+    # download each in WORKFLOWS array
+    for url in "${WORKFLOWS[@]}"; do
+        filename=$(basename "$url") # get filename from URL
+        wget -O "${WORKFLOW_DIR}/${filename}" "$url"
+    done
+}
+
+# Downloads all input files from INPUTS array
 function provisioning_get_input() {
     INPUT_DIR=${COMFYUI_DIR}/input
 
