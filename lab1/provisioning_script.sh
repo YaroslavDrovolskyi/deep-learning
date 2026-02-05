@@ -16,14 +16,12 @@ PIP_PACKAGES=(
 )
 
 NODES=(
-    #"https://github.com/ltdrdata/ComfyUI-Manager"
-    #"https://github.com/cubiq/ComfyUI_essentials"
-    #"https://github.com/Layer-norm/comfyui-lama-remover"
-    #"https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/Layer-norm/comfyui-lama-remover"
+    "https://github.com/rgthree/rgthree-comfy"
 )
 
 WORKFLOWS=(
-    #"https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/workflow/object-removal-inpainting.json"
+    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/workflow/object-removal-inpainting.json"
 )
 
 CHECKPOINT_MODELS=(
@@ -53,7 +51,7 @@ function provisioning_start() {
     provisioning_get_apt_packages
     provisioning_get_nodes
     provisioning_get_pip_packages
-    provisioning_get_inputs
+    provisioning_get_input
     provisioning_get_files \
         "${COMFYUI_DIR}/models/checkpoints" \
         "${CHECKPOINT_MODELS[@]}"
@@ -180,7 +178,7 @@ function provisioning_download() {
     fi
 }
 
-function provisioning_get_inputs() {
+function provisioning_get_input() {
     INPUT_DIR=${COMFYUI_DIR}/input
 
     # Create the directory just in case
@@ -190,7 +188,7 @@ function provisioning_get_inputs() {
     wget -O "${INPUT_DIR}/beach1.png" "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/beach1.png"
     wget -O "${INPUT_DIR}/beach2.png" "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/beach2.png"
     wget -O "${INPUT_DIR}/flowers1.png" "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/flowers1.png"
-    wget -O "${INPUT_DIR}/flowers1.png" "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/flowers2.png"
+    wget -O "${INPUT_DIR}/flowers2.png" "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/flowers2.png"
     wget -O "${INPUT_DIR}/food.png" "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/food.png"
     wget -O "${INPUT_DIR}/grass.jpg" "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/grass.jpg"
     wget -O "${INPUT_DIR}/man-car.png" "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/man-car.png"
