@@ -44,7 +44,7 @@ ESRGAN_MODELS=(
 CONTROLNET_MODELS=(
 )
 
-INPUT_IMAGES=(
+INPUT=(
     "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/beach1.png"
     "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/beach2.png"
     "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/flowers1.png"
@@ -61,7 +61,7 @@ function provisioning_start() {
     provisioning_get_apt_packages
     provisioning_get_nodes
     provisioning_get_pip_packages
-    provisioning_get_input_images
+    provisioning_get_input
     provisioning_get_workflows
     provisioning_get_files \
         "${COMFYUI_DIR}/models/checkpoints" \
@@ -202,17 +202,17 @@ function provisioning_get_workflows() {
     done
 }
 
-# Downloads all input files from INPUT_IMAGES array
-function provisioning_get_input_images() {
+# Downloads all input files from INPUT array
+function provisioning_get_input() {
     INPUT_DIR=${COMFYUI_DIR}/input
 
     # Create the directory just in case
     mkdir -p "$INPUT_DIR"
 
     # download each in WORKFLOWS array
-    for url in "${INPUT_IMAGES[@]}"; do
+    for url in "${INPUT[@]}"; do
         filename=$(basename "$url") # get filename from URL
-        wget -O "${$INPUT_DIR}/${filename}" "$url"
+        wget -O "${INPUT_DIR}/${filename}" "$url"
     done
 }
 
