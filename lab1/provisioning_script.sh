@@ -28,7 +28,7 @@ WORKFLOWS=(
 CHECKPOINT_MODELS=(
     "https://civitai.com/api/download/models/798204?type=Model&format=SafeTensor&size=full&fp=fp16"
     "https://huggingface.co/Comfy-Org/stable_diffusion_2.1_repackaged/resolve/main/512-inpainting-ema.safetensors"
-    "https://huggingface.co/facebook/sam3/blob/main/sam3.pt" # access token will be used in provisioning_download() function
+    "https://huggingface.co/facebook/sam3/resolve/main/sam3.pt" # access token will be used in provisioning_download() function
 )
 
 UNET_MODELS=(
