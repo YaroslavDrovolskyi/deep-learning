@@ -19,10 +19,12 @@ NODES=(
     "https://github.com/Layer-norm/comfyui-lama-remover"
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/PozzettiAndrea/ComfyUI-SAM3"
+    "https://github.com/ltdrdata/was-node-suite-comfyui"
 )
 
 WORKFLOWS=(
-    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/workflow/object-removal-inpainting.json"
+    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/workflow/01-object-removal-inpainting.json"
+    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/workflow/02-object-segmentation-removal-inpainting.json"
 )
 
 CHECKPOINT_MODELS=(
