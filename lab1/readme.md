@@ -14,7 +14,7 @@ Provisioning script loads following:
   - [comfyui-lama-remover](https://github.com/Layer-norm/comfyui-lama-remover) 
   - [rgthree-comfy](https://github.com/rgthree/rgthree-comfy)
   - [ComfyUI-SAM3](https://github.com/PozzettiAndrea/ComfyUI-SAM3) (*)
-  - [WAS Node Suite](https://github.com/ltdrdata/was-node-suite-comfyui) — for merging list of masks into single mask
+  - [WAS Node Suite (Revised)](https://github.com/ltdrdata/was-node-suite-comfyui) — for merging list of masks into single mask
 
 _(*) **Note:** for using SAM3 model, you need to have a Hugging Face
 account with permission to download SAM3 model

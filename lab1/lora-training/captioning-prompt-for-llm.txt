@@ -1,0 +1,1 @@
+Describe this image in details for annotating for LoRA training (for stable diffusion model) in format of Natural Language caption. Among other things also describe the background. Mention Cat Tom as "[trigger]".
