@@ -110,7 +110,7 @@ Trigger word is `TomTC` (abbreviated from "Tom the cat") — cat Tom from
     - Trigger Word: `TomTC`
 - MODEL:
   - Model Architecture: `SD 1.5`
-  - Name or Path: `stable-diffusion-v1-5/stable-diffusion-inpainting`
+  - Name or Path: `stable-diffusion-v1-5/stable-diffusion-v1-5`
     _(Note: `stable-diffusion-v1-5` is the default repository option in
      Ostrich UI where to grab SD 1.5 models)_
 - TARGET:
