@@ -25,11 +25,13 @@ NODES=(
 WORKFLOWS=(
     "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/workflow/01-object-removal-inpainting.json"
     "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/workflow/02-object-segmentation-removal-inpainting.json"
+    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/workflow/03-object-segmentation-removal-inpainting-lora.json"
 )
 
 CHECKPOINT_MODELS=(
     "https://civitai.com/api/download/models/798204?type=Model&format=SafeTensor&size=full&fp=fp16" # realvisxlV50_v50LightningBakedvae.safetensors
-    "https://huggingface.co/Comfy-Org/stable_diffusion_2.1_repackaged/resolve/main/512-inpainting-ema.safetensors"
+    "https://huggingface.co/Comfy-Org/stable_diffusion_2.1_repackaged/resolve/main/512-inpainting-ema.safetensors" # inpainting SD 2.1
+    "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt" # inpainting SD 1.5
     "https://huggingface.co/facebook/sam3/resolve/main/sam3.pt" # access token will be used in provisioning_download() function
 )
 
@@ -37,6 +39,12 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
+    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/lora-training/loras/sd15_inpainting_tomtc_lora_000001500.safetensors"
+    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/lora-training/loras/sd15_inpainting_tomtc_lora_000002000.safetensors"
+    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/lora-training/loras/sd15_inpainting_tomtc_lora_000002250.safetensors"
+    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/lora-training/loras/sd15_inpainting_tomtc_lora_000002500.safetensors"
+    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/lora-training/loras/sd15_inpainting_tomtc_lora_000002750.safetensors"
+    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/lora-training/loras/sd15_inpainting_tomtc_lora_000003000.safetensors"
 )
 
 VAE_MODELS=(
@@ -56,6 +64,7 @@ INPUT=(
     "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/food.png"
     "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/grass.jpg"
     "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/man-car.png"
+    "https://raw.githubusercontent.com/YaroslavDrovolskyi/deep-learning/refs/heads/main/lab1/input/dog.jpg"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
