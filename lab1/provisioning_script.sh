@@ -76,6 +76,7 @@ function provisioning_start() {
     provisioning_get_pip_packages
     provisioning_get_input
     provisioning_get_workflows
+    provisioning_get_loras
     provisioning_get_files \
         "${COMFYUI_DIR}/models/checkpoints" \
         "${CHECKPOINT_MODELS[@]}"
@@ -222,10 +223,24 @@ function provisioning_get_input() {
     # Create the directory just in case
     mkdir -p "$INPUT_DIR"
 
-    # download each in WORKFLOWS array
+    # download each in INPUT array
     for url in "${INPUT[@]}"; do
         filename=$(basename "$url") # get filename from URL
         wget -O "${INPUT_DIR}/${filename}" "$url"
+    done
+}
+
+# Downloads all loras from LORA_MODELS array, because it don't work
+function provisioning_get_loras() {
+    LORAS_DIR=${COMFYUI_DIR}/models/loras
+
+    # Create the directory just in case
+    mkdir -p "$LORAS_DIR"
+
+    # download each in LORA_MODELS array
+    for url in "${LORA_MODELS[@]}"; do
+        filename=$(basename "$url") # get filename from URL
+        wget -O "${LORAS_DIR}/${filename}" "$url"
     done
 }
 
