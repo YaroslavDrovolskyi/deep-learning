@@ -72,7 +72,9 @@ Useful links:
 - Example: https://comfyanonymous.github.io/ComfyUI_examples/inpaint/
 - Tutorial: https://docs.comfy.org/tutorials/basic/inpaint#comfyui-inpainting-workflow-example
 - Overal inpainting guide: https://civitai.com/articles/161/basic-inpainting-guide
-- `KSampler` docs: https://docs.comfy.org/built-in-nodes/sampling/ksampler
+- `KSampler` docs:
+  - https://blenderneko.github.io/ComfyUI-docs/Core%20Nodes/Sampling/KSampler/
+  - https://docs.comfy.org/built-in-nodes/sampling/ksampler
 
 
 For inpainting, **SD 1.5 model** is used:
